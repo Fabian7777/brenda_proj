@@ -1,0 +1,60 @@
+<ion-header>
+    <ion-toolbar color="matfacebook">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Laundry</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <!-- <div id="wave" style="margin-top: -5px;">
+
+  </div> -->
+
+    <div style="height: 150px; overflow: hidden;" style="margin-top: -1.5rem; z-index: 5;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+      <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: #3f51b5;"></path>
+    </svg>
+    </div>
+
+    <div class="login-logo" style="margin-top: -2.5rem; ">
+        <img src="assets/imgs/laundry1.jpg" alt="Jkuat Logo" style="margin-top: -45px; border-radius: 5px;">
+    </div>
+
+    <ion-card style="margin-top: -80px; border-top: 10px; margin-bottom: 10px;">
+        <ion-card-content>
+            <ion-item>
+                <ion-label position="floating">Laundry mode</ion-label>
+                <ion-select [(ngModel)]="selected_mode" placeholder="Select laundry mode" interface="action-sheet">
+                    <ion-select-option *ngFor="let item of laundry_list" value="{{item.l_id}}">{{item.l_type}}</ion-select-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Additional details:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-textarea [(ngModel)]="laundry_data.additional" rows="2" placeholder="Enter any additional details here eg: near unaitas Juja around gate A"></ion-textarea>
+
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Bill contact:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input [(ngModel)]="laundry_data.pay_contact" required type="number"></ion-input>
+            </ion-item>
+
+        </ion-card-content>
+    </ion-card>
+
+    <div style="margin: 10px; margin-bottom: 10px;">
+        <ion-button expand="block" color="matfacebook" (click)="pay()">Make payment</ion-button>
+    </div>
+
+
+</ion-content>
+<app-tabs></app-tabs>

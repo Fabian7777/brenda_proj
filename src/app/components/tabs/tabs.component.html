@@ -1,0 +1,27 @@
+<ion-toolbar>
+    <ion-tabs>
+        <ion-tab-bar slot="bottom">
+
+            <ion-tab-button (click)="choose_cleaning()">
+                <ion-icon name="shirt"></ion-icon>
+                <ion-label>Cleaning</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button (click)="open_invoices()">
+                <ion-icon name="pricetags"></ion-icon>
+                <ion-label>Billings</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button (click)="open_transactions()">
+                <ion-icon name="calendar"></ion-icon>
+                <ion-label>Transactions</ion-label>
+            </ion-tab-button>
+
+            <ion-tab-button (click)="app_status()">
+                <ion-icon name="information-circle"></ion-icon>
+                <ion-label>Status</ion-label>
+                <ion-badge>Active</ion-badge>
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-tabs>
+</ion-toolbar>

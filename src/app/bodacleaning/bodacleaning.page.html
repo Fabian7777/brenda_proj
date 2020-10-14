@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-toolbar color="matfacebook">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Boda Cleaning</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <div id="wave" style="margin-top: -2.5rem;">
+
+    </div>
+
+    <div class="login-logo">
+        <img src="assets/imgs/unnamed.png" alt="Jkuat Logo">
+    </div>
+
+    <ion-card style="margin-top: -10px; border-top: 10px; margin-bottom: 10px;">
+        <ion-card-content>
+            <ion-item>
+                <ion-label position="stacked">Boda license plates:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input [(ngModel)]="boda_data.license" required type="text" style="text-transform: uppercase;"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Pay contact:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input [(ngModel)]="boda_data.pay_contact" required type="number"></ion-input>
+            </ion-item>
+
+            <!--  <ion-item>
+                <ion-label position="floating">Cleaning date</ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" value="20/08/2020"></ion-datetime>
+            </ion-item> -->
+
+        </ion-card-content>
+    </ion-card>
+
+    <div style="margin: 10px; margin-bottom: 10px;" (click)="pay()">
+        <ion-button expand="block" color="matfacebook">Make payment</ion-button>
+    </div>
+
+
+</ion-content>
+<app-tabs></app-tabs>

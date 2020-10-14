@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar color="matfacebook">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Car Cleaning</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <!-- <div id="wave" style="margin-top: -5px;">
+
+    </div> -->
+
+    <div style="height: 150px; overflow: hidden;" style="margin-top: -2.5rem;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: #3f51b5;"></path>
+      </svg>
+    </div>
+
+    <div class="login-logo">
+        <img src="assets/imgs/car1.jpg" alt="Jkuat Logo" style="margin-top: -45px;">
+    </div>
+
+    <ion-card style="margin-top: -80px; border-top: 10px; margin-bottom: 10px;">
+        <ion-card-content>
+
+            <ion-item>
+                <ion-label position="stacked">Car licanse plate:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input [(ngModel)]="car_data.license" required type="text" style="text-transform: uppercase;"></ion-input>
+            </ion-item>
+
+
+            <ion-item>
+                <ion-label position="floating">Car type
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-select #newselect placeholder="Select car type" [(ngModel)]="selected_car" interface="action-sheet">
+
+                    <div *ngFor="let item of cars_list">
+                        <ion-select-option value="{{item.cr_id}}">{{item.cr_name}}</ion-select-option>
+                    </div>
+
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Bill contact:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input [(ngModel)]="car_data.pay_contact" required type="number"></ion-input>
+            </ion-item>
+
+
+        </ion-card-content>
+    </ion-card>
+
+    <div style="margin: 10px; margin-bottom: 10px;">
+        <ion-button expand="block" color="matfacebook" (click)="pay()">Make payment</ion-button>
+    </div>
+
+
+</ion-content>
+<app-tabs></app-tabs>

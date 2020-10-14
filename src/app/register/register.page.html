@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-toolbar color="matfacebook" class="ion-no-border">
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Register</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <!-- <div id="wave" style="margin-top: -5px;">
+
+</div> -->
+
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 60%; width: 100%;">
+  <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: #3f51b5;"></path>
+</svg>
+    </div>
+
+    <div class="login-logo">
+        <img src="assets/imgs/logo.png" alt="Jkuat Logo">
+    </div>
+
+    <div style="margin-top: -100px; border-top: 10px; margin-bottom: 10px; border-bottom: none !important;">
+        <ion-row>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="stacked">First name:
+                        <ion-text color="danger">*</ion-text>
+                    </ion-label>
+                    <ion-input [(ngModel)]="userdata.firstname" (keyup.enter)="register()" required type="text" placeholder="first name"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col>
+                <ion-item>
+                    <ion-label position="stacked">Last name:
+                        <ion-text color="danger">*</ion-text>
+                    </ion-label>
+                    <ion-input [(ngModel)]="userdata.lastname" (keyup.enter)="register()" required type="text" placeholder="last name"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-item>
+            <ion-label position="stacked">Email:
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input [(ngModel)]="userdata.email" (keyup.enter)="register()" required type="email" placeholder="email address"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Contact:
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input [(ngModel)]="userdata.contact" (keyup.enter)="register()" required type="number" placeholder="phone number eg: 07xxxxx"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Password:
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input [(ngModel)]="userdata.password" (keyup.enter)="register()" required type="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="stacked">Repeat password:
+                <ion-text color="danger">*</ion-text>
+            </ion-label>
+            <ion-input [(ngModel)]="repeat_password" (keyup.enter)="register()" required type="password"></ion-input>
+        </ion-item>
+
+        <br>
+    </div>
+
+    <div class="fn" style="margin-left: 10px; margin-right: 10px;">
+        <ion-button expand="block" color="matfacebook" (click)="register()">
+            <ion-icon name="person-add" slot="start"></ion-icon> REGISTER </ion-button><br>
+    </div>
+
+
+</ion-content>

@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-toolbar color="matfacebook">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Vaccuming</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <!-- <div id="wave" style="margin-top: -5px;">
+
+</div> -->
+
+    <div style="height: 150px; overflow: hidden;" style="margin-top: -1rem;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+    <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: #3f51b5;"></path>
+  </svg>
+    </div>
+
+    <!-- <div class="login-logo" style="margin-top: -3rem;">
+        <img src="{{display_image}}" alt="Jkuat Logo">
+    </div> -->
+
+    <ion-card style="margin-top: -20px; border-top: 10px; margin-bottom: 10px;">
+        <ion-card-content>
+            <ion-item>
+                <ion-label position="floating">Carpet type</ion-label>
+                <ion-select placeholder="Select type" [(ngModel)]="selected_carpet_type">
+
+                    <div *ngFor="let item of carpet_types">
+                        <ion-select-option value="{{item.ct_id}}">{{item.ct_name}}</ion-select-option>
+                    </div>
+
+
+                </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Carpet size</ion-label>
+                <ion-select placeholder="Select size" [(ngModel)]="selected_carpet_size" interface="action-sheet">
+                    <div *ngFor="let size of carpet_sizes">
+                        <ion-select-option *ngIf="size?.cz_carpet === selected_carpet_type" value="{{size.cz_id}}">{{size.cz_det}}</ion-select-option>
+                    </div>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="stacked">Bill contact:
+                    <ion-text color="danger">*</ion-text>
+                </ion-label>
+                <ion-input [(ngModel)]="vacuum_data.pay_contact" required type="number"></ion-input>
+            </ion-item>
+
+
+        </ion-card-content>
+    </ion-card>
+
+    <div style="margin: 10px; margin-bottom: 10px;">
+        <ion-button expand="block" color="matfacebook" (click)="pay()">Make payment</ion-button>
+    </div>
+
+
+</ion-content>
+<app-tabs></app-tabs>

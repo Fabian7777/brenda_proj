@@ -1,0 +1,83 @@
+<ion-header>
+    <ion-toolbar color="matfacebook">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>My Account</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+    <!-- <div id="wave" style="margin-top: -5px;">
+
+  </div> -->
+
+    <div style="height: 150px; overflow: hidden;">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 60%; width: 100%;">
+      <path d="M0.00,92.27 C216.83,192.92 304.30,8.39 500.00,109.03 L500.00,0.00 L0.00,0.00 Z" style="stroke: none;fill: #3f51b5;"></path>
+    </svg>
+    </div>
+
+    <div class="card hovercard" style="margin-top: -110px;">
+        <div class="cardheader">
+
+        </div>
+        <div class="avatar">
+            <img alt="" src="{{defaultuser}}">
+        </div>
+        <div class="change">
+
+            <ion-button shape="round" color="matfacebook">
+                <ion-icon name="settings" slot="start"></ion-icon> Change Photo </ion-button>
+
+        </div>
+    </div>
+
+    <ion-list>
+        <ion-item button>
+            <ion-icon name="contacts" slot="start" color="matfacebook"> </ion-icon>
+            <ion-label>
+                <h3>Customer name</h3>
+                <p>Justus Mwangi</p>
+            </ion-label>
+        </ion-item>
+        <ion-item button>
+            <ion-icon name="mail" slot="start" color="matfacebook"> </ion-icon>
+            <ion-label>
+                <h3>Email</h3>
+                <p>mwangijustus12@gmail.com</p>
+            </ion-label>
+            <ion-badge slot="end" color="matfacebook">Active</ion-badge>
+        </ion-item>
+        <ion-item button>
+            <ion-icon name="call" slot="start" color="matfacebook"> </ion-icon>
+            <ion-label>
+                <h3>Contact</h3>
+                <p>mwangijustus12@gmail.com</p>
+            </ion-label>
+            <ion-badge slot="end" color="matfacebook">verified</ion-badge>
+        </ion-item>
+        <ion-item button>
+            <ion-icon name="map" slot="start" color="matfacebook"> </ion-icon>
+            <ion-label>
+                <h3>Town</h3>
+                <p>Kagio</p>
+            </ion-label>
+
+        </ion-item>
+        <ion-item button>
+            <ion-icon name="information-circle" slot="start" color="matfacebook"> </ion-icon>
+            <ion-label>
+                Account status
+            </ion-label>
+            <ion-badge slot="end" color="matfacebook">Active</ion-badge>
+        </ion-item>
+
+    </ion-list>
+    <br>
+    <br>
+
+</ion-content>
+<app-tabs></app-tabs>

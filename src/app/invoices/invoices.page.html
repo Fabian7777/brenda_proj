@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-toolbar color="matfacebook">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Invoices</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-list #scheduleList [hidden]="activities === 0" *ngIf="users_invoices?.length > 0">
+        <ion-item-group>
+            <ion-item-divider sticky>
+                <ion-label>
+                    My Invoices
+                </ion-label>
+            </ion-item-divider>
+
+            <ion-item-sliding #slidingItem [attr.track]=" 'angular' | lowercase" *ngFor="let item of users_invoices">
+                <ion-item button>
+                    <ion-label>
+                        <h3>{{item?.inv_ref}} &nbsp; <code style="letter-spacing: 0px; word-spacing: -6px; color: #3f51b5;">{{item?.inv_date |  date}}</code> </h3>
+                        <p>
+                            {{item?.inv_cat}}
+                        </p>
+                        <p>
+                            {{item?.inv_details}}
+                        </p>
+                        <p>
+                            KES {{item?.inv_amount | number:'1.2'}}
+                        </p>
+                    </ion-label>
+
+                    <ion-badge item-end color="linkedin" *ngIf="item.res_code === '0' ">
+                        Paid
+                    </ion-badge>
+                    <ion-badge item-end color="danger" *ngIf="item.res_code !== '0' ">
+                        Failed
+                    </ion-badge>
+
+                </ion-item>
+                <!--  <ion-item-options>
+                  <ion-item-option color="instagram">
+                      Retry
+                  </ion-item-option>
+              </ion-item-options> -->
+            </ion-item-sliding>
+
+
+        </ion-item-group>
+    </ion-list>
+
+    <ion-list-header [hidden]="activities > 0" *ngIf="users_invoices?.length === 0 ">
+        You have NO Invoices
+    </ion-list-header>
+
+</ion-content>
+
+<app-tabs></app-tabs>

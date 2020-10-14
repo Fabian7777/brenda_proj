@@ -9,18 +9,255 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 
+
 /* Core CSS required for Ionic components to work properly */
+
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
+
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
+
 @import "~@ionic/angular/css/padding.css";
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+:root {
+    --ion-color-coolp: #800080;
+    --ion-color-coolp-rgb: 128, 0, 128;
+    --ion-color-coolp-contrast: #ffffff;
+    --ion-color-coolp-contrast-rgb: 255, 255, 255;
+    --ion-color-coolp-shade: #710071;
+    --ion-color-coolp-tint: #8d1a8d;
+}
+
+.ion-color-coolp {
+    --ion-color-base: var(--ion-color-coolp);
+    --ion-color-base-rgb: var(--ion-color-coolp-rgb);
+    --ion-color-contrast: var(--ion-color-coolp-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-coolp-contrast-rgb);
+    --ion-color-shade: var(--ion-color-coolp-shade);
+    --ion-color-tint: var(--ion-color-coolp-tint);
+}
+
+ :root {
+    --ion-color-mygreen: #228B22;
+    --ion-color-mygreen-rgb: 34, 139, 34;
+    --ion-color-mygreen-contrast: #ffffff;
+    --ion-color-mygreen-contrast-rgb: 255, 255, 255;
+    --ion-color-mygreen-shade: #1e7a1e;
+    --ion-color-mygreen-tint: #389738;
+}
+
+.ion-color-mygreen {
+    --ion-color-base: var(--ion-color-mygreen);
+    --ion-color-base-rgb: var(--ion-color-mygreen-rgb);
+    --ion-color-contrast: var(--ion-color-mygreen-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-mygreen-contrast-rgb);
+    --ion-color-shade: var(--ion-color-mygreen-shade);
+    --ion-color-tint: var(--ion-color-mygreen-tint);
+}
+
+ :root {
+    --ion-color-twitter: #00acee;
+    --ion-color-twitter-rgb: 0, 172, 238;
+    --ion-color-twitter-contrast: #ffffff;
+    --ion-color-twitter-contrast-rgb: 0, 0, 0;
+    --ion-color-twitter-shade: #0097d1;
+    --ion-color-twitter-tint: #1ab4f0;
+}
+
+:root {
+    --ion-color-matfacebook: #3f51b5;
+    --ion-color-matfacebook-rgb: 63, 81, 181;
+    --ion-color-matfacebook-contrast: #ffffff;
+    --ion-color-matfacebook-contrast-rgb: 255, 255, 255;
+    --ion-color-matfacebook-shade: #37479f;
+    --ion-color-matfacebook-tint: #5262bc;
+}
+
+.ion-color-matfacebook {
+    --ion-color-base: var(--ion-color-matfacebook);
+    --ion-color-base-rgb: var(--ion-color-matfacebook-rgb);
+    --ion-color-contrast: var(--ion-color-matfacebook-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-matfacebook-contrast-rgb);
+    --ion-color-shade: var(--ion-color-matfacebook-shade);
+    --ion-color-tint: var(--ion-color-matfacebook-tint);
+}
+
+:root {
+    --ion-color-matfacebook: #3f51b5;
+    --ion-color-matfacebook-rgb: 63, 81, 181;
+    --ion-color-matfacebook-contrast: #ffffff;
+    --ion-color-matfacebook-contrast-rgb: 255, 255, 255;
+    --ion-color-matfacebook-shade: #37479f;
+    --ion-color-matfacebook-tint: #5262bc;
+}
+
+.ion-color-matfacebook {
+    --ion-color-base: var(--ion-color-matfacebook);
+    --ion-color-base-rgb: var(--ion-color-matfacebook-rgb);
+    --ion-color-contrast: var(--ion-color-matfacebook-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-matfacebook-contrast-rgb);
+    --ion-color-shade: var(--ion-color-matfacebook-shade);
+    --ion-color-tint: var(--ion-color-matfacebook-tint);
+}
+
+.ion-color-twitter {
+    --ion-color-base: var(--ion-color-twitter);
+    --ion-color-base-rgb: var(--ion-color-twitter-rgb);
+    --ion-color-contrast: var(--ion-color-twitter-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-twitter-contrast-rgb);
+    --ion-color-shade: var(--ion-color-twitter-shade);
+    --ion-color-tint: var(--ion-color-twitter-tint);
+}
+
+ :root {
+    --ion-color-instagram: #c32aa3;
+    --ion-color-instagram-rgb: 195, 42, 163;
+    --ion-color-instagram-contrast: #ffffff;
+    --ion-color-instagram-contrast-rgb: 255, 255, 255;
+    --ion-color-instagram-shade: #ac258f;
+    --ion-color-instagram-tint: #c93fac;
+}
+
+.ion-color-instagram {
+    --ion-color-base: var(--ion-color-instagram);
+    --ion-color-base-rgb: var(--ion-color-instagram-rgb);
+    --ion-color-contrast: var(--ion-color-instagram-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-instagram-contrast-rgb);
+    --ion-color-shade: var(--ion-color-instagram-shade);
+    --ion-color-tint: var(--ion-color-instagram-tint);
+}
+
+ :root {
+    --ion-color-linkedin: #0e76a8;
+    --ion-color-linkedin-rgb: 14, 118, 168;
+    --ion-color-linkedin-contrast: #ffffff;
+    --ion-color-linkedin-contrast-rgb: 255, 255, 255;
+    --ion-color-linkedin-shade: #0c6894;
+    --ion-color-linkedin-tint: #2684b1;
+}
+
+.ion-color-linkedin {
+    --ion-color-base: var(--ion-color-linkedin);
+    --ion-color-base-rgb: var(--ion-color-linkedin-rgb);
+    --ion-color-contrast: var(--ion-color-linkedin-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-linkedin-contrast-rgb);
+    --ion-color-shade: var(--ion-color-linkedin-shade);
+    --ion-color-tint: var(--ion-color-linkedin-tint);
+}
+
+ :root {
+    --ion-color-whatsapp: #25d366;
+    --ion-color-whatsapp-rgb: 37, 211, 102;
+    --ion-color-whatsapp-contrast: #000000;
+    --ion-color-whatsapp-contrast-rgb: 0, 0, 0;
+    --ion-color-whatsapp-shade: #21ba5a;
+    --ion-color-whatsapp-tint: #3bd775;
+}
+
+.ion-color-whatsapp {
+    --ion-color-base: var(--ion-color-whatsapp);
+    --ion-color-base-rgb: var(--ion-color-whatsapp-rgb);
+    --ion-color-contrast: var(--ion-color-whatsapp-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-whatsapp-contrast-rgb);
+    --ion-color-shade: var(--ion-color-whatsapp-shade);
+    --ion-color-tint: var(--ion-color-whatsapp-tint);
+}
+
+ :root {
+    --ion-color-facebook: #3b5998;
+    --ion-color-facebook-rgb: 59, 89, 152;
+    --ion-color-facebook-contrast: #ffffff;
+    --ion-color-facebook-contrast-rgb: 255, 255, 255;
+    --ion-color-facebook-shade: #344e86;
+    --ion-color-facebook-tint: #4f6aa2;
+}
+
+.ion-color-facebook {
+    --ion-color-base: var(--ion-color-facebook);
+    --ion-color-base-rgb: var(--ion-color-facebook-rgb);
+    --ion-color-contrast: var(--ion-color-facebook-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-facebook-contrast-rgb);
+    --ion-color-shade: var(--ion-color-facebook-shade);
+    --ion-color-tint: var(--ion-color-facebook-tint);
+}
+
+:root {
+    --ion-color-gmail: #D44638;
+    --ion-color-gmail-rgb: 212, 70, 56;
+    --ion-color-gmail-contrast: #ffffff;
+    --ion-color-gmail-contrast-rgb: 255, 255, 255;
+    --ion-color-gmail-shade: #bb3e31;
+    --ion-color-gmail-tint: #d8594c;
+}
+
+.ion-color-gmail {
+    --ion-color-base: var(--ion-color-gmail);
+    --ion-color-base-rgb: var(--ion-color-gmail-rgb);
+    --ion-color-contrast: var(--ion-color-gmail-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-gmail-contrast-rgb);
+    --ion-color-shade: var(--ion-color-gmail-shade);
+    --ion-color-tint: var(--ion-color-gmail-tint);
+}
+
+ion-button {
+    text-transform: none;
+}
+
+.card.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    //background-color: rgba(214, 224, 226, 0.2);
+    margin-top: -19px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.card.hovercard .cardheader {
+    background: url("assets/imgs/images.png");
+    background-size: cover;
+    height: 150px;
+}
+
+.card.hovercard .avatar {
+    position: relative;
+    top: -50px;
+    margin-bottom: -50px;
+}
+
+.card.hovercard .avatar img {
+    width: 100px;
+    height: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    -webkit-border-radius: 50%;
+    //-moz-border-radius: 50%;
+    -moz-border-radius: 10px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    object-fit: cover; //image style profile
+}
+
+.card.hovercard .info {
+    padding: 4px 8px 10px;
+}
+
+.card.hovercard .info .title {
+    margin-bottom: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #262626;
+    vertical-align: middle;
+}
